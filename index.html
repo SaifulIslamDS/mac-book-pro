@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mac-book-pro</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Mac Book Pro</title>
+
 </head>
+
 <body>
-    <h1>Mac book pro</h1>
+    <!-- main  -->
+    <main>
+        <!-- main container  -->
+        <section class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid" src="/images/mac.png" alt="">
+                </div>
+                <div class="col-6">
+                    <div class="description">
+                        <h2>Customize your Blue 24‑inch iMac with Apple M1 chip.</h2>
+                        <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine</p>
+                    </div>
+                    <div class="memory mt-4">
+                        <h2>Memory</h2>
+                        <button id="memory-8">8GB unified memory</button>
+                        <button id="memory-16">16GB unified memory</button>
+                    </div>
+                    <div class="storage mt-4">
+                        <h2>Storage</h2>
+                        <button id="storage-256">256GB SSD Storage</button>
+                        <button id="storage-512">512GB SSD Storage</button>
+                        <button id="storage-1tb">1TBSSD Storage</button>
+                    </div>
+                    <div class="delivery mt-4">
+                        <h2>Choose your delivery option</h2>
+                        <button id="free">Friday, Aug 25 FREE Prime Delivery</button>
+                        <button id="premium">Friday, Aug 21 Delivery charge $20</button>
+                    </div>
+                    <div>
+                        <div class="row mt-4">
+                            <div class="col-8">
+                                <table class="table">
+                                      <tr>
+                                        <td><h4>Best Price</h4></td>
+                                        <td><h4>$<span id="macbook-price">1299</span></h4></td>
+                                      </tr>
+                                      <tr>
+                                        <td><h4>Extra Memory Cost</h4></td>
+                                        <td><h4>$<span id="extra-memory-price">0</span></h4></td>
+                                      </tr>
+                                      <tr>
+                                        <td><h4>Extra Storage Cost</h4></td>
+                                        <td><h4>$<span id="extra-storage-price">0</span></h4></td>
+                                      </tr>
+                                      <tr>
+                                        <td><h4>Delivery charge</h4></td>
+                                        <td><h4>$<span id="delivery-charge">0</span></h4></td>
+                                      </tr>
+                                      <tr style="border-top: 2px solid;">
+                                        <td><h4>Total Price</h4></td>
+                                        <td><h4>$<span id="total">1299</span></h4></td>
+                                      </tr>
+                                  </table>
+                                  <div class="coupon">
+                                    <h3>Add promo code</h3>
+                                    <input type="text" name="" id="promo-code-value" placeholder="Your coupon code here">
+                                    <button type="submit" id="promo-code-btn">Apply</button>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <hr style="border: 2px solid;">
+                    <p id="grand-total" class="text-center h3">Total : $ <span>1299</span> </p> 
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>
