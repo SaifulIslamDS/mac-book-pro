@@ -30,37 +30,74 @@ function updateCartTotal() {
     cartTotal.innerText = productPrice + memoryPrice + storagePrice + dliveryCost;
     grandTotal.innerText = cartTotal.innerText;
 }
+// Add and remove css class with function ifContains 
+function ifContains(element){
+    return element.classList.contains("active");
+}
 
 // Event listeners: Memory
 memory8.addEventListener("click", function(){
+    // Set css class while active
+    if (!ifContains(memory8)) {
+        memory8.classList.add("active");
+        memory16.classList.remove("active");
+    }
     extraMemoryPrice.innerText =  0;
-    updateCartTotal()
+    updateCartTotal();
 });
 memory16.addEventListener("click", function(){
+    // Set css class while active
+    if (!ifContains(memory16)) {
+        memory16.classList.add("active");
+        memory8.classList.remove("active");
+    }
     extraMemoryPrice.innerText =  180;
-    updateCartTotal()
+    updateCartTotal();
 });
 
 // Event listeners: Storage
 storage256.addEventListener("click", function(){
+    if (!ifContains(storage256)) {
+        storage256.classList.add("active");
+        storage512.classList.remove("active");
+        storage1tb.classList.remove("active");
+    }
     extraStoragePrice.innerText = 0;
     updateCartTotal();
 });
 storage512.addEventListener("click", function(){
+    if (!ifContains(storage512)) {
+        storage512.classList.add("active");
+        storage256.classList.remove("active");
+        storage1tb.classList.remove("active");
+    }
     extraStoragePrice.innerText = 100;
     updateCartTotal();
 });
 storage1tb.addEventListener("click", function(){
+    if (!ifContains(storage1tb)) {
+        storage1tb.classList.add("active");
+        storage256.classList.remove("active");
+        storage512.classList.remove("active");
+    }
     extraStoragePrice.innerText = 180;
     updateCartTotal();
 });
 
 // Event listeners: Delivery
 freeDelivery.addEventListener("click", function(){
+    if (!ifContains(freeDelivery)) {
+        freeDelivery.classList.add("active");
+        expressDelivery.classList.remove("active");
+    }
     deliveryCharge.innerText = 0;
     updateCartTotal();
 });
 expressDelivery.addEventListener("click", function(){
+    if (!ifContains(expressDelivery)) {
+        expressDelivery.classList.add("active");
+        freeDelivery.classList.remove("active");
+    }
     deliveryCharge.innerText = 20;
     updateCartTotal();
 });

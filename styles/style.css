@@ -1,0 +1,23 @@
+/* Style the active class (and buttons on mouse-over) */
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #B0C9DD;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+    background-color: #666;
+    color: white;
+}
+input#promo-code-value {
+    padding: 6px 30px;
+}
+button#promo-code-btn {
+    margin-top: -4px;
+    padding: 10px 40px;
+}
