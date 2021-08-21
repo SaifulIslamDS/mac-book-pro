@@ -69,7 +69,7 @@ expressDelivery.addEventListener("click", function(){
 const promoCodeBtn = document.getElementById("promo-code-btn");
 const promoCodeValue = document.getElementById("promo-code-value");
 
-// Adding event listener for promocode
+// Adding event listener for promocode 
 promoCodeBtn.addEventListener("click", function(){
     if (promoCodeValue.value == "stevekaku") {
         grandTotal.innerText = cartTotal.innerText - (cartTotal.innerText * 20)/100;
