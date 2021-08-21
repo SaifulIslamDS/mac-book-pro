@@ -65,27 +65,16 @@ expressDelivery.addEventListener("click", function(){
     updateCartTotal();
 });
 
-
-
 // Coupon code application
 const promoCodeBtn = document.getElementById("promo-code-btn");
 const promoCodeValue = document.getElementById("promo-code-value");
 
-/* 
->> Coupon discout calculation function:
->> Function name: applyCoupon()
->> Coupon code: stevekaku
->> If applied, 20% price from grand total will be reduced  
- */
-function applyCoupon(){
+// Adding event listener for promocode
+promoCodeBtn.addEventListener("click", function(){
     if (promoCodeValue.value == "stevekaku") {
         grandTotal.innerText = cartTotal.innerText - (cartTotal.innerText * 20)/100;
     } else {
         const errorMsg = document.getElementById("error-msg");
         errorMsg.style.display = "block";
     }
-}
-// Adding event listener for promocode apply button with the applyCoupon() function 
-promoCodeBtn.addEventListener("click", function(){
-    applyCoupon();
 });
